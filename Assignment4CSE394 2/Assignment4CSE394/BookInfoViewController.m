@@ -59,12 +59,12 @@
 -(void)addToReadListClicked:(id)sender
 {
     
-    PFObject *player = [PFObject objectWithClassName:@"Book"];
+    PFObject *player = [PFObject objectWithClassName:@"Movie"];
     [player setObject:self.selectedMovie.movieTitle forKey:@"movieTitle"];
     [player setObject:_imageString forKey:@"movieImage"];
     [player setObject:self.selectedMovie.movieRating forKey:@"movieRating"];
     [player setObject:self.selectedMovie.movieDescription forKey:@"movieDescription"];
-    [player setObject:self.selectedMovie.movieYear forKey:@"movieWeeks"];
+    [player setObject:self.selectedMovie.movieYear forKey:@"movieYear"];
     [player setObject:self.selectedMovie.movieAuthor forKey:@"movieAuthor"];
     [player setObject:_amazonString forKey:@"movieAmazon"];
     [player setObject:[[PFUser currentUser] username] forKey:@"user"];

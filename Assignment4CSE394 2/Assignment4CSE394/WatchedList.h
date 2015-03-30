@@ -15,6 +15,6 @@
 @property NSString *movieAuthor;
 @property NSString *movieDescription;
 @property NSString * movieRating;
-@property NSString* movieWeeks;
+@property NSString* movieYear;
 @property NSString *movieType;
 @end

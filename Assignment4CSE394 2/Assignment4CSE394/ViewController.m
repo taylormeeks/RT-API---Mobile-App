@@ -80,7 +80,7 @@
 
 {
     
-    PFQuery *listQuery = [PFQuery queryWithClassName:@"Book"];
+    PFQuery *listQuery = [PFQuery queryWithClassName:@"Movie"];
     self.watchedMovies = [NSMutableArray new];
     //limit to books to user
     [listQuery whereKey:@"user" equalTo:[[PFUser currentUser] username]];
@@ -90,26 +90,26 @@
         for (PFObject *object in objects) {
             WatchedList *newMovie = [[WatchedList alloc]init];
             
-            NSString *rewriteString = [object objectForKey:@"bookTitle"];
+            NSString *rewriteString = [object objectForKey:@"movieTitle"];
             newMovie.movieTitle = rewriteString;
             
-            NSString *rewriteString2 = [object objectForKey:@"bookImage"];
+            NSString *rewriteString2 = [object objectForKey:@"movieImage"];
             NSURL *url = [NSURL URLWithString:[rewriteString2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             newMovie.movieImage = url;
             
-            NSString *rewriteString3 = [object objectForKey:@"bookRank"];
+            NSString *rewriteString3 = [object objectForKey:@"movieRank"];
             newMovie.movieRating = rewriteString3;
             
-            NSString *rewriteString4 = [object objectForKey:@"bookDescription"];
+            NSString *rewriteString4 = [object objectForKey:@"movieDescription"];
             newMovie.movieDescription = rewriteString4;
             
-            NSString *rewriteString5 = [object objectForKey:@"bookWeeks"];
-            newMovie.movieWeeks = rewriteString5;
+            NSString *rewriteString5 = [object objectForKey:@"movieYear"];
+            newMovie.movieYear = rewriteString5;
             
-            NSString *rewriteString6 = [object objectForKey:@"bookAuthor"];
+            NSString *rewriteString6 = [object objectForKey:@"movieAuthor"];
             newMovie.movieAuthor = rewriteString6;
             
-            NSString *rewriteString7 = [object objectForKey:@"bookAmazon"];
+            NSString *rewriteString7 = [object objectForKey:@"movieAmazon"];
             NSURL *url2 = [NSURL URLWithString:[rewriteString7 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             newMovie.movieAmazonLink= url2;
             
