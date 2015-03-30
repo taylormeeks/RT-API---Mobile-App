@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ImageCache setImage:forKey:]:ImageCache.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController pickerView:numberOfRowsInComponent:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.manager.numOfTypes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController requestBookswithType:withTitle:withAuthor:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.bookList[0].bookTitle">
+            </PersistentString>
+            <PersistentString
+               value = "self.manager.bookList[0]">
+            </PersistentString>
+            <PersistentString
+               value = "myBook.bookImage">
+            </PersistentString>
+            <PersistentString
+               value = "self.bookList">
+            </PersistentString>
+            <PersistentString
+               value = "myBook.bookAmazonLink">
+            </PersistentString>
+            <PersistentString
+               value = "myBook.bookTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TableViewController tableView:accessoryButtonTappedForRowWithIndexPath:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.selectedBook">
+            </PersistentString>
+            <PersistentString
+               value = "self.selectedBook.bookTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewDidAppear:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[PFUser currentUser] username]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__55-[TableViewController tableView:cellForRowAtIndexPath:]_block_invoke:TableViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ReadingListTableViewController tableView:cellForRowAtIndexPath:]:ReadingListTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_readingListBooks">
+            </PersistentString>
+            <PersistentString
+               value = "book.bookImage">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BookInfoViewController viewDidLoad]:BookInfoViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.selectedBookImage">
+            </PersistentString>
+            <PersistentString
+               value = "self.selectedBook.bookTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "sharedInstance">
+            </PersistentString>
+            <PersistentString
+               value = "book.bookImage">
+            </PersistentString>
+            <PersistentString
+               value = "cell.imageView.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController prepareForSegue:sender:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.SearchButton">
+            </PersistentString>
+            <PersistentString
+               value = "self.manager.bookList">
+            </PersistentString>
+            <PersistentString
+               value = "[(UIButton *)sender currentTitle]">
+            </PersistentString>
+            <PersistentString
+               value = "sender.tag">
+            </PersistentString>
+            <PersistentString
+               value = "[sender isEqual:self.SearchButton]">
+            </PersistentString>
+            <PersistentString
+               value = "sender == self.SearchButton">
+            </PersistentString>
+            <PersistentString
+               value = "dest.tableBookList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewDidLoad]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.manager.myType">
+            </PersistentString>
+            <PersistentString
+               value = "self.manager.bookTypeList[0]">
+            </PersistentString>
+            <PersistentString
+               value = "self.manager.numOfTypes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__46-[ViewController loadBooksWithCompletionBlock]_block_invoke:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.readingListBooks">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__62-[ReadingListTableViewController loadBooksWithCompletionBlock]_block_invoke:ReadingListTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[object objectForKey:@&quot;bookTitle&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "test">
+            </PersistentString>
+            <PersistentString
+               value = "newBook.bookTitle">
+            </PersistentString>
+            <PersistentString
+               value = "newBook">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TableViewController prepareForSegue:sender:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dest.selectedBookImage">
+            </PersistentString>
+            <PersistentString
+               value = "dest.selectedBook.bookTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController requestBookswithTitle:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.manager.bookList [0]">
+            </PersistentString>
+            <PersistentString
+               value = "books">
+            </PersistentString>
+            <PersistentString
+               value = "results[0]">
+            </PersistentString>
+            <PersistentString
+               value = "self.manager.bookList[0].movieData">
+            </PersistentString>
+            <PersistentString
+               value = "self.manager.bookList ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ReadingListTableViewController loadBooksWithCompletionBlock]:ReadingListTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "objects">
+            </PersistentString>
+            <PersistentString
+               value = "[[PFUser currentUser] username]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
