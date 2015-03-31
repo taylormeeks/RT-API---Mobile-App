@@ -13,6 +13,9 @@
 
 #define RT_API_URL_THEATER @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=50&page=1&country=us"
 
+#define RT_API_URL_TOP25 @"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?limit=25&country=us"
+
+
 #define RT_API_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies.json?"
 
 #define JSON @".json?"
@@ -28,6 +31,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *LogoutButton;
 @property (strong, nonatomic) IBOutlet UIButton *ReadingListButton;
 @property (strong, nonatomic) IBOutlet UIButton *InTheatersButton;
+@property (strong, nonatomic) IBOutlet UIButton *TopMoviesButton;
 @property NSMutableArray *watchedMovies;
 @end
 
@@ -60,6 +64,8 @@
     [self.InTheatersButton addTarget: self action:@selector(theatersTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.ReadingListButton addTarget: self action:@selector(readListTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.TopMoviesButton addTarget: self action:@selector(topMoviesTapped:) forControlEvents:UIControlEventTouchUpInside];
     //[self.LogoutButton addTarget: self action:@selector(logoutPressed:) forControlEvents:UIControlEventTouchUpInside];
     
 }
@@ -143,6 +149,11 @@
     
 }
 
+-(void)topMoviesTapped:(id)sender
+{
+    [self requestTopMovies];
+}
+
 - (void)requestMoviesInTheater
 {
     NSString *requestString = [NSString stringWithFormat:@"%@%@",RT_API_URL_THEATER,@"&apikey=tk8xcgeeg8ud35ha5j8dgpft"];
@@ -166,6 +177,28 @@
     
     [self performSegueWithIdentifier:@"searchWasClicked" sender:self.SearchButton];
     
+}
+
+-(void)requestTopMovies
+{
+    NSString *request = [NSString stringWithFormat:@"%@%@",RT_API_URL_TOP25,@"&apikey=tk8xcgeeg8ud35ha5j8dgpft"];
+    NSLog(@"%@",request);
+    NSURL *url = [NSURL URLWithString:request];
+    
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:Nil];
+    NSString *temp = dict[@"total"];
+    self.manager.numberOfResults = temp.integerValue;
+    NSDictionary *results = [dict valueForKey:@"movies"];
+    
+    for(NSDictionary *movie in results)
+    {
+        Movie *ourMovie = [[Movie alloc] init];
+        ourMovie.movieData = movie;
+        [self.manager.movieList addObject:ourMovie];
+    }
+    
+    [self performSegueWithIdentifier:@"searchWasClicked" sender:self.SearchButton];
 }
 
 - (void)requestMovieswithTitle:(NSString *)Title
