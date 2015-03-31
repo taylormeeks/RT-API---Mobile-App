@@ -11,11 +11,14 @@
 
 #define RT_API_KEY @"&apikey=tk8xcgeeg8ud35ha5j8dgpft";
 
+#define RT_API_URL_THEATER @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=50&page=1&country=us"
+
 #define RT_API_URL @"http://api.rottentomatoes.com/api/public/v1.0/movies.json?"
+
+#define JSON @".json?"
 
 #define NYT_VALID_LIST_NAMES_URL @"http://api.nytimes.com/svc/books/v3/lists/names.json?api-key=065415ec04c5c377808c199095f59ec4:17:71463407"
 
-#define RESPONSE_TYPE @".json?"
 
 #define NYT_VALID_LIST_NAMES_URL @"http://api.nytimes.com/svc/books/v3/lists/names.json?api-key=065415ec04c5c377808c199095f59ec4:17:71463407"
 
@@ -24,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *SearchButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *LogoutButton;
 @property (strong, nonatomic) IBOutlet UIButton *ReadingListButton;
+@property (strong, nonatomic) IBOutlet UIButton *InTheatersButton;
 @property NSMutableArray *watchedMovies;
 @end
 
@@ -40,19 +44,20 @@
     NSURL *typeUrl = [NSURL URLWithString:requestType];
     NSData *typeData =[NSData dataWithContentsOfURL:typeUrl];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:typeData options:kNilOptions error:Nil];
+    /*
     NSString *tempResult = dict[@"num_results"];
     self.manager.numOfTypes = tempResult.integerValue;
     
     NSArray *typeResults = [dict valueForKeyPath:@"results"];
     
     self.manager.movieTypeList =[[NSMutableArray alloc] init];
-    for(NSDictionary *movie in typeResults)
+    /*for(NSDictionary *movie in typeResults)
     {
         Movie *ourMovie = [[Movie alloc] init];
         ourMovie.movieData = movie;
         [self.manager.movieTypeList addObject:ourMovie];
-    }
-    [self.SearchButton addTarget: self action:@selector(searchTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }*/
+    [self.InTheatersButton addTarget: self action:@selector(theatersTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.ReadingListButton addTarget: self action:@selector(readListTapped:) forControlEvents:UIControlEventTouchUpInside];
     //[self.LogoutButton addTarget: self action:@selector(logoutPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -132,13 +137,35 @@
 }
 
 //get fields and make api call with values
--(void)searchTapped:(id)sender
+-(void)theatersTapped:(id)sender
 {
+    [self requestMoviesInTheater];
     
-    //self.manager.Title = self.TitleField.text;
-    //self.manager.Author = self.AuthorField.text;
-    //[self getTypeSelection]; //gets type and puts it in myType
-    //[self requestBookswithType:self.manager.myType
+}
+
+- (void)requestMoviesInTheater
+{
+    NSString *requestString = [NSString stringWithFormat:@"%@%@",RT_API_URL_THEATER,@"&apikey=tk8xcgeeg8ud35ha5j8dgpft"];
+    
+    NSLog(@"%@",requestString);
+    NSURL *url = [NSURL URLWithString:requestString];
+    
+    NSData *data =[NSData dataWithContentsOfURL:url];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:Nil];
+    NSString *tempResult = dict[@"total"];
+    self.manager.numberOfResults = tempResult.integerValue;
+    NSDictionary *results = [dict valueForKeyPath:@"movies"];
+    
+    // NSArray *books = results[@"movies"];
+    for(NSDictionary *movie in results)
+    {
+        Movie *ourMovie = [[Movie alloc] init];
+        ourMovie.movieData = movie;
+        [self.manager.movieList addObject:ourMovie];
+    }
+    
+    [self performSegueWithIdentifier:@"searchWasClicked" sender:self.SearchButton];
+    
 }
 
 - (void)requestMovieswithTitle:(NSString *)Title

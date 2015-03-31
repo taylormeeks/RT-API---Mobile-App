@@ -17,6 +17,11 @@
 		9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F758E8D1AA41B7800B0967B /* WatchedList.m */; };
 		9F85CF7E1AA0CC45008506E5 /* BookInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */; };
 		9FB5E0E41A9FF956002E0FC3 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5E0E31A9FF956002E0FC3 /* Movie.m */; };
+		9FCEEE3B1ACB3C15006D88F8 /* Roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE3A1ACB3C15006D88F8 /* Roll.png */; };
+		9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */; };
+		9FCEEE411ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE401ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg */; };
+		9FCEEE431ACB4171006D88F8 /* film-reel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE421ACB4171006D88F8 /* film-reel.jpg */; };
+		9FCEEE451ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */; };
 		9FEB84361A9FBD2B002D40E7 /* MovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB84351A9FBD2B002D40E7 /* MovieManager.m */; };
 		9FF2B6691A9EC3E900E480A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2B6681A9EC3E900E480A5 /* main.m */; };
 		9FF2B66C1A9EC3E900E480A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2B66B1A9EC3E900E480A5 /* AppDelegate.m */; };
@@ -65,6 +70,11 @@
 		9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewController.m; sourceTree = "<group>"; };
 		9FB5E0E21A9FF956002E0FC3 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		9FB5E0E31A9FF956002E0FC3 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		9FCEEE3A1ACB3C15006D88F8 /* Roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Roll.png; sourceTree = "<group>"; };
+		9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = film_roll.png; sourceTree = "<group>"; };
+		9FCEEE401ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "curtain-ideas-pinterest.jpg"; sourceTree = "<group>"; };
+		9FCEEE421ACB4171006D88F8 /* film-reel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "film-reel.jpg"; sourceTree = "<group>"; };
+		9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "o-MOVIE-THEATER-SEATS-facebook.jpg"; sourceTree = "<group>"; };
 		9FEB84341A9FBD2B002D40E7 /* MovieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieManager.h; sourceTree = "<group>"; };
 		9FEB84351A9FBD2B002D40E7 /* MovieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieManager.m; sourceTree = "<group>"; };
 		9FF2B6631A9EC3E900E480A5 /* Assignment4CSE394.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment4CSE394.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +187,11 @@
 		9FF2B6661A9EC3E900E480A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */,
+				9FCEEE421ACB4171006D88F8 /* film-reel.jpg */,
+				9FCEEE401ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg */,
+				9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */,
+				9FCEEE3A1ACB3C15006D88F8 /* Roll.png */,
 				9FF2B6671A9EC3E900E480A5 /* Info.plist */,
 				9FF2B6681A9EC3E900E480A5 /* main.m */,
 			);
@@ -302,9 +317,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCEEE3B1ACB3C15006D88F8 /* Roll.png in Resources */,
 				9FF2B6721A9EC3E900E480A5 /* Main.storyboard in Resources */,
+				9FCEEE411ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg in Resources */,
 				9FF2B6771A9EC3E900E480A5 /* LaunchScreen.xib in Resources */,
+				9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */,
 				9FF2B6741A9EC3E900E480A5 /* Images.xcassets in Resources */,
+				9FCEEE431ACB4171006D88F8 /* film-reel.jpg in Resources */,
+				9FCEEE451ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
