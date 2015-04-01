@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CA062161ACCAC0600ACE25C /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA062151ACCAC0600ACE25C /* ProfileController.m */; };
 		9F00343D1AA03A8100766B33 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F00343C1AA03A8100766B33 /* TableViewController.m */; };
 		9F0034401AA03C2500766B33 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F00343F1AA03C2500766B33 /* ImageCache.m */; };
 		9F2A017B1AA3E289001B44F0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2A017A1AA3E289001B44F0 /* ParseUI.framework */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CA062141ACCAC0600ACE25C /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
+		2CA062151ACCAC0600ACE25C /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
 		9F00343B1AA03A8100766B33 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		9F00343C1AA03A8100766B33 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		9F00343E1AA03C2500766B33 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		9FF2B6651A9EC3E900E480A5 /* Assignment4CSE394 */ = {
 			isa = PBXGroup;
 			children = (
+				2CA062141ACCAC0600ACE25C /* ProfileController.h */,
+				2CA062151ACCAC0600ACE25C /* ProfileController.m */,
 				9FF2B66A1A9EC3E900E480A5 /* AppDelegate.h */,
 				9FF2B66B1A9EC3E900E480A5 /* AppDelegate.m */,
 				9FF2B66D1A9EC3E900E480A5 /* ViewController.h */,
@@ -346,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB5E0E41A9FF956002E0FC3 /* Movie.m in Sources */,
+				2CA062161ACCAC0600ACE25C /* ProfileController.m in Sources */,
 				9F85CF7E1AA0CC45008506E5 /* BookInfoViewController.m in Sources */,
 				9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */,
 				9FF2B66F1A9EC3E900E480A5 /* ViewController.m in Sources */,

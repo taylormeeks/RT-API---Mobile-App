@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y67-sN-Dch">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y67-sN-Dch">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -112,6 +112,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="125" y="545" width="250" height="123"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="UVw-YW-wlN" kind="push" id="000-kD-uE5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.0" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,6 +169,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2884.5" y="561"/>
+        </scene>
+        <!--Profile Controller-->
+        <scene sceneID="R8c-bN-PEj">
+            <objects>
+                <viewController id="UVw-YW-wlN" customClass="ProfileController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EnZ-Sj-CoD"/>
+                        <viewControllerLayoutGuide type="bottom" id="7b6-Nj-2ql"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MVb-OC-HFx">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="dis" translatesAutoresizingMaskIntoConstraints="NO" id="U29-ku-EZ5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="65" width="183" height="182"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjQ-4L-fme">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Choose Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="76" y="270" width="79" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="62" y="260" width="106" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="getPic:" destination="UVw-YW-wlN" eventType="touchUpInside" id="p66-ol-h6b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41568627450980394" green="0.0" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="U29-ku-EZ5"/>
+                                <exclude reference="wjQ-4L-fme"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="U29-ku-EZ5"/>
+                                <include reference="wjQ-4L-fme"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="dEH-Hv-kK3"/>
+                    <connections>
+                        <outlet property="chooseButton" destination="wjQ-4L-fme" id="tCc-sE-Om3"/>
+                        <outlet property="imageView" destination="U29-ku-EZ5" id="Ok3-zo-NKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kq9-ie-suE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893.5" y="1306"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ZcN-48-d0p">
