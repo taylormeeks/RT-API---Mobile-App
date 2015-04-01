@@ -54,6 +54,11 @@
             [cell setNeedsLayout];
         }];
     }
+    UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
+    av.backgroundColor = [UIColor clearColor];
+    av.opaque = NO;
+    av.image = [UIImage imageNamed:@"Film-Strip.jpg"];
+    cell.backgroundView = av;
 
     return cell;
     

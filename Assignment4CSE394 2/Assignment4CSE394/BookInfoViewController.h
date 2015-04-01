@@ -10,5 +10,5 @@
 #import "ImageCache.h"
 @interface BookInfoViewController : UIViewController
 @property Movie* selectedMovie;
-@property bool showAdd;
+@property int showAdd;//0 = show, 1 = hide, 2 = remove
 @end

@@ -88,7 +88,7 @@
 {
     BookInfoViewController *dest = segue.destinationViewController;
     dest.selectedMovie = self.selectedMovie;
-    dest.showAdd = true;
+    dest.showAdd = self.ShowAdd;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }

@@ -113,7 +113,7 @@
             NSURL *url = [NSURL URLWithString:[rewriteString2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             newMovie.movieImage = url;
             
-            NSString *rewriteString3 = [object objectForKey:@"movieRank"];
+            NSString *rewriteString3 = [object objectForKey:@"movieRating"];
             newMovie.movieRating = rewriteString3;
             
             NSString *rewriteString4 = [object objectForKey:@"movieDescription"];
@@ -138,7 +138,7 @@
 
 -(void)readListTapped:(id)sender
 {
-    [self performSegueWithIdentifier:@"readListClicked" sender:self.ReadingListButton];
+    [self performSegueWithIdentifier:@"searchWasClicked" sender:self.ReadingListButton];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -336,7 +336,9 @@
 }
 
 
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+}
 
 #pragma mark - Navigation
 
@@ -346,10 +348,12 @@
     if(sender == self.SearchButton){
         TableViewController *dest = segue.destinationViewController;
         dest.tableMovieArray = self.manager.movieList;
+        dest.ShowAdd = 0;
     }
     else{
-        ReadingListTableViewController *dest = segue.destinationViewController;
+        TableViewController *dest = segue.destinationViewController;
         dest.tableMovieArray = self.watchedMovies;
+        dest.ShowAdd = 1;
     }
     
 }

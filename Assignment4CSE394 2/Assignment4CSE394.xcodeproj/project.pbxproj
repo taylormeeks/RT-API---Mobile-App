@@ -12,7 +12,6 @@
 		9F2A017B1AA3E289001B44F0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2A017A1AA3E289001B44F0 /* ParseUI.framework */; };
 		9F2A017F1AA3E3FD001B44F0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2A017E1AA3E3FD001B44F0 /* Social.framework */; };
 		9F2A01811AA3E403001B44F0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2A01801AA3E403001B44F0 /* Accounts.framework */; };
-		9F2A01841AA3F3CF001B44F0 /* ReadingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A01831AA3F3CF001B44F0 /* ReadingListTableViewController.m */; };
 		9F48810B1AB330C20087D74E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48810A1AB330C20087D74E /* Parse.framework */; };
 		9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F758E8D1AA41B7800B0967B /* WatchedList.m */; };
 		9F85CF7E1AA0CC45008506E5 /* BookInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */; };
@@ -62,8 +61,6 @@
 		9F2A017A1AA3E289001B44F0 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		9F2A017E1AA3E3FD001B44F0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9F2A01801AA3E403001B44F0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		9F2A01821AA3F3CF001B44F0 /* ReadingListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingListTableViewController.h; sourceTree = "<group>"; };
-		9F2A01831AA3F3CF001B44F0 /* ReadingListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingListTableViewController.m; sourceTree = "<group>"; };
 		9F48810A1AB330C20087D74E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9F758E8C1AA41B7800B0967B /* WatchedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchedList.h; sourceTree = "<group>"; };
 		9F758E8D1AA41B7800B0967B /* WatchedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchedList.m; sourceTree = "<group>"; };
@@ -176,8 +173,6 @@
 				9FB5E0E31A9FF956002E0FC3 /* Movie.m */,
 				9F00343B1AA03A8100766B33 /* TableViewController.h */,
 				9F00343C1AA03A8100766B33 /* TableViewController.m */,
-				9F2A01821AA3F3CF001B44F0 /* ReadingListTableViewController.h */,
-				9F2A01831AA3F3CF001B44F0 /* ReadingListTableViewController.m */,
 				9F85CF7C1AA0CC45008506E5 /* BookInfoViewController.h */,
 				9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */,
 				9F758E8C1AA41B7800B0967B /* WatchedList.h */,
@@ -353,7 +348,6 @@
 				9FF2B66C1A9EC3E900E480A5 /* AppDelegate.m in Sources */,
 				9FEB84361A9FBD2B002D40E7 /* MovieManager.m in Sources */,
 				9F00343D1AA03A8100766B33 /* TableViewController.m in Sources */,
-				9F2A01841AA3F3CF001B44F0 /* ReadingListTableViewController.m in Sources */,
 				9F0034401AA03C2500766B33 /* ImageCache.m in Sources */,
 				9FF2B6691A9EC3E900E480A5 /* main.m in Sources */,
 			);

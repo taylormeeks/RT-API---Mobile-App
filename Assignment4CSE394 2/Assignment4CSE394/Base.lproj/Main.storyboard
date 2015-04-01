@@ -4,35 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Reading List Table View Controller-->
-        <scene sceneID="pjt-Lr-IK1">
-            <objects>
-                <tableViewController restorationIdentifier="ReadingList" id="Phj-Gh-MSV" customClass="ReadingListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="6i1-DU-E8A">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookInfo" rowHeight="95" id="DjF-Uj-TxW">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DjF-Uj-TxW" id="Fen-Kd-eRV">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Phj-Gh-MSV" id="Y5m-98-YzE"/>
-                            <outlet property="delegate" destination="Phj-Gh-MSV" id="ipZ-gw-JFH"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <segue destination="rAi-Bg-VrB" kind="show" identifier="BookInfoClicked" id="WV9-1Y-kXK"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8JP-2y-FSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3709.5" y="-165"/>
-        </scene>
         <!--Movie Search-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -96,15 +67,6 @@
                                     <rect key="frame" x="136" y="320" width="103" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something Else" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R15-TF-eEu">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="457" width="124" height="21"/>
-                                </variation>
-                            </label>
                             <searchBar contentMode="redraw" barStyle="black" placeholder="Search For A Movie" translatesAutoresizingMaskIntoConstraints="NO" id="PI5-FC-Ver">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="barTintColor" red="0.49803921568627452" green="0.0" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,6 +78,18 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="MPX-sa-U7w"/>
                                 </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 25 Released" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R15-TF-eEu">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="457" width="124" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="457" width="153" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -125,8 +99,8 @@
                                 <exclude reference="l71-QP-Jok"/>
                                 <exclude reference="pTj-Vr-tYJ"/>
                                 <exclude reference="zqb-8p-7iz"/>
-                                <exclude reference="R15-TF-eEu"/>
                                 <exclude reference="PI5-FC-Ver"/>
+                                <exclude reference="R15-TF-eEu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -136,8 +110,8 @@
                                 <include reference="l71-QP-Jok"/>
                                 <include reference="pTj-Vr-tYJ"/>
                                 <include reference="zqb-8p-7iz"/>
-                                <include reference="R15-TF-eEu"/>
                                 <include reference="PI5-FC-Ver"/>
+                                <include reference="R15-TF-eEu"/>
                             </mask>
                         </variation>
                     </view>
@@ -155,12 +129,11 @@
                         <outlet property="SearchBar" destination="PI5-FC-Ver" id="tLQ-ub-C5X"/>
                         <outlet property="TopMoviesButton" destination="fht-Gq-i6x" id="9wZ-cf-K5v"/>
                         <segue destination="rpG-iC-HjF" kind="show" identifier="searchWasClicked" id="76P-Zz-GzM"/>
-                        <segue destination="Phj-Gh-MSV" kind="show" identifier="readListClicked" id="rZD-Oc-qvb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2884.5" y="572"/>
+            <point key="canvasLocation" x="2884.5" y="571.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ZcN-48-d0p">
@@ -383,7 +356,4 @@
         <image name="film_roll.png" width="800" height="318"/>
         <image name="o-MOVIE-THEATER-SEATS-facebook.jpg" width="1536" height="1025"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hac-vD-eoE"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(!self.showAdd){
+    if(self.showAdd == 1){ //1 = hide
         self.AddToReadListButton.hidden = true;
     }
     [self.AddToReadListButton addTarget: self action:@selector(addToReadListClicked:) forControlEvents:UIControlEventTouchUpInside];
