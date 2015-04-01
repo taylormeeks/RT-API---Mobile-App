@@ -15,7 +15,7 @@
 #import <ParseUI/ParseUI.h>
 #import "ReadingListTableViewController.h"
 
-@interface ViewController : UIViewController <UIPickerViewDataSource>
+@interface ViewController : UIViewController
 
 @property MovieManager *manager;
 

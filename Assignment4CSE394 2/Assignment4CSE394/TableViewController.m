@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.selectedMovie = [[Movie alloc]init];
+   // [tempImageView release];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,6 +50,7 @@
     Movie *movie = self.tableMovieArray[indexPath.row];
     NSString *displayString = @"";
     displayString = [displayString stringByAppendingFormat:@"%@\n%@",movie.movieTitle,movie.movieRating];
+    cell.textLabel.textColor =[UIColor whiteColor];
     cell.textLabel.numberOfLines = 2;
     cell.textLabel.font = [UIFont systemFontOfSize:12];
     cell.textLabel.text = displayString;
@@ -61,28 +62,14 @@
             [cell setNeedsLayout];
         }];
     }
-    /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSInteger numBooks = self.tableBookList.count;
-        if(indexPath.row == numBooks-5)
-        {
-            NSInteger newBooks = [self.manager requestMoreMovies];
-            NSMutableArray *paths = [[NSMutableArray alloc] init];
-            for(NSInteger i=numRecipes; i<numRecipes+newRecipes; i++)
-            {
-                [paths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
-            }
-            
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [tableView beginUpdates];
-                if(paths.count)
-                    [tableView insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationLeft];
-                [tableView endUpdates];
-                
-            });
-        }
-    });*/
-
+ 
+    UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
+    av.backgroundColor = [UIColor clearColor];
+    av.opaque = NO;
+    av.image = [UIImage imageNamed:@"Film-Strip.jpg"];
+    cell.backgroundView = av;
+    
+    self.selectedMovie = [[Movie alloc]init];
     return cell;
 }
 

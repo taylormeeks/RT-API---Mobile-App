@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Parse/Parse.h"
 
+
 #define RT_API_KEY @"&apikey=tk8xcgeeg8ud35ha5j8dgpft";
 
 #define RT_API_URL_THEATER @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=50&page=1&country=us"
@@ -42,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.manager = [[MovieManager alloc]init];
     self.manager.movieList =[[NSMutableArray alloc] init];
     NSString *requestType = NYT_VALID_LIST_NAMES_URL;
@@ -61,6 +63,9 @@
         ourMovie.movieData = movie;
         [self.manager.movieTypeList addObject:ourMovie];
     }*/
+    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+
+    
     [self.InTheatersButton addTarget: self action:@selector(theatersTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.ReadingListButton addTarget: self action:@selector(readListTapped:) forControlEvents:UIControlEventTouchUpInside];
