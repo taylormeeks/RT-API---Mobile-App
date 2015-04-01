@@ -112,9 +112,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="125" y="545" width="250" height="123"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="Bol-rJ-ZwW" kind="show" identifier="profileClicked" id="5DM-OX-uQg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.0" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -170,27 +167,6 @@
             </objects>
             <point key="canvasLocation" x="2884.5" y="561"/>
         </scene>
-        <!--User Profile View Controller-->
-        <scene sceneID="kmP-1O-fQ2">
-            <objects>
-                <viewController id="Bol-rJ-ZwW" customClass="UserProfileViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lcg-fl-hxW"/>
-                        <viewControllerLayoutGuide type="bottom" id="gdN-TZ-q82"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zTd-cC-Iqy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="delegate" destination="zTd-cC-Iqy" id="QbT-Ek-WB7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xUO-Et-w3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2884.5" y="1311"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="ZcN-48-d0p">
             <objects>
@@ -233,16 +209,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf3-Jg-65z">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="406" height="259"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="theater-sign-template.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rhn-Io-yPl">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-34" y="20" width="468" height="360"/>
                                 </variation>
-                            </label>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzM-wt-xVu">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -253,6 +225,9 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="331" width="341" height="132"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="288" y="448" width="341" height="132"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weeks on list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzl-7K-0ZN">
@@ -266,17 +241,8 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="205" y="293" width="133" height="21"/>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A5-p1-QSM">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="174" y="264" width="194" height="21"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="350" width="133" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnl-cA-pZT">
@@ -290,6 +256,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="174" y="215" width="194" height="46"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="102" y="160" width="194" height="46"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Really stupid long title for a book like why would you make the name this long idiot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdb-gR-XvP">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -302,11 +271,17 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="174" y="108" width="194" height="115"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="78" y="86" width="252" height="127"/>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Et3-eh-lpn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="9" y="72" width="157" height="236"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="291" width="157" height="236"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56G-7j-uZk">
@@ -341,34 +316,53 @@
                                     <rect key="frame" x="43" y="462" width="313" height="47"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A5-p1-QSM">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="264" width="194" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="102" y="200" width="194" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Kf3-Jg-65z"/>
+                                <exclude reference="rhn-Io-yPl"/>
                                 <exclude reference="AzM-wt-xVu"/>
                                 <exclude reference="Mzl-7K-0ZN"/>
-                                <exclude reference="4A5-p1-QSM"/>
                                 <exclude reference="Vnl-cA-pZT"/>
                                 <exclude reference="Zdb-gR-XvP"/>
                                 <exclude reference="Et3-eh-lpn"/>
                                 <exclude reference="56G-7j-uZk"/>
                                 <exclude reference="K2R-rM-5mP"/>
                                 <exclude reference="Img-Zw-lLM"/>
+                                <exclude reference="4A5-p1-QSM"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Kf3-Jg-65z"/>
                                 <include reference="AzM-wt-xVu"/>
                                 <include reference="Mzl-7K-0ZN"/>
-                                <include reference="4A5-p1-QSM"/>
                                 <include reference="Vnl-cA-pZT"/>
                                 <include reference="Zdb-gR-XvP"/>
                                 <include reference="Et3-eh-lpn"/>
                                 <include reference="56G-7j-uZk"/>
                                 <include reference="K2R-rM-5mP"/>
                                 <include reference="Img-Zw-lLM"/>
+                                <include reference="4A5-p1-QSM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rhn-Io-yPl"/>
                             </mask>
                         </variation>
                     </view>
@@ -385,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Cf-B6-26w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4482" y="562"/>
+            <point key="canvasLocation" x="4482" y="561.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sxJ-KG-zyP">
@@ -413,5 +407,6 @@
         <image name="film-reel.jpg" width="1600" height="900"/>
         <image name="film_roll.png" width="800" height="318"/>
         <image name="o-MOVIE-THEATER-SEATS-facebook.jpg" width="1536" height="1025"/>
+        <image name="theater-sign-template.jpg" width="1280" height="960"/>
     </resources>
 </document>

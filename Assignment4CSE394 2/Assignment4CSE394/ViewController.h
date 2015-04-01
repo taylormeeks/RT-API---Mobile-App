@@ -13,8 +13,7 @@
 #import "Movie.h"
 #import "TableViewController.h"
 #import <ParseUI/ParseUI.h>
-#import "ReadingListTableViewController.h"
-
+#import "WatchedList.h"
 @interface ViewController : UIViewController
 
 @property MovieManager *manager;

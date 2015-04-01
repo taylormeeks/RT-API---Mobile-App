@@ -15,7 +15,7 @@
 		9F48810B1AB330C20087D74E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48810A1AB330C20087D74E /* Parse.framework */; };
 		9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F758E8D1AA41B7800B0967B /* WatchedList.m */; };
 		9F85CF7E1AA0CC45008506E5 /* BookInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */; };
-		9F9B07FD1ACBB0D000CBDFD8 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B07FC1ACBB0D000CBDFD8 /* UserProfileViewController.m */; };
+		9F94A96F1ACC9F1200ECD295 /* theater-sign-template.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F94A96E1ACC9F1200ECD295 /* theater-sign-template.jpg */; };
 		9FB5E0E41A9FF956002E0FC3 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5E0E31A9FF956002E0FC3 /* Movie.m */; };
 		9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */; };
 		9FCEEE411ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE401ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg */; };
@@ -67,8 +67,7 @@
 		9F758E8D1AA41B7800B0967B /* WatchedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchedList.m; sourceTree = "<group>"; };
 		9F85CF7C1AA0CC45008506E5 /* BookInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoViewController.h; sourceTree = "<group>"; };
 		9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewController.m; sourceTree = "<group>"; };
-		9F9B07FB1ACBB0D000CBDFD8 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = ../UserProfileViewController.h; sourceTree = "<group>"; };
-		9F9B07FC1ACBB0D000CBDFD8 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = ../UserProfileViewController.m; sourceTree = "<group>"; };
+		9F94A96E1ACC9F1200ECD295 /* theater-sign-template.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "theater-sign-template.jpg"; sourceTree = "<group>"; };
 		9FB5E0E21A9FF956002E0FC3 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		9FB5E0E31A9FF956002E0FC3 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = film_roll.png; sourceTree = "<group>"; };
@@ -160,8 +159,6 @@
 		9FF2B6651A9EC3E900E480A5 /* Assignment4CSE394 */ = {
 			isa = PBXGroup;
 			children = (
-				9F9B07FB1ACBB0D000CBDFD8 /* UserProfileViewController.h */,
-				9F9B07FC1ACBB0D000CBDFD8 /* UserProfileViewController.m */,
 				9FF2B66A1A9EC3E900E480A5 /* AppDelegate.h */,
 				9FF2B66B1A9EC3E900E480A5 /* AppDelegate.m */,
 				9FF2B66D1A9EC3E900E480A5 /* ViewController.h */,
@@ -189,6 +186,7 @@
 		9FF2B6661A9EC3E900E480A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F94A96E1ACC9F1200ECD295 /* theater-sign-template.jpg */,
 				9FEEE4D41ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png */,
 				9FCEEE4C1ACB4B3E006D88F8 /* Film-Strip.jpg */,
 				9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */,
@@ -326,6 +324,7 @@
 				9FCEEE4D1ACB4B3E006D88F8 /* Film-Strip.jpg in Resources */,
 				9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */,
 				9FF2B6741A9EC3E900E480A5 /* Images.xcassets in Resources */,
+				9F94A96F1ACC9F1200ECD295 /* theater-sign-template.jpg in Resources */,
 				9FCEEE431ACB4171006D88F8 /* film-reel.jpg in Resources */,
 				9FCEEE451ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg in Resources */,
 				9FEEE4D51ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png in Resources */,
@@ -351,7 +350,6 @@
 				9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */,
 				9FF2B66F1A9EC3E900E480A5 /* ViewController.m in Sources */,
 				9FF2B66C1A9EC3E900E480A5 /* AppDelegate.m in Sources */,
-				9F9B07FD1ACBB0D000CBDFD8 /* UserProfileViewController.m in Sources */,
 				9FEB84361A9FBD2B002D40E7 /* MovieManager.m in Sources */,
 				9F00343D1AA03A8100766B33 /* TableViewController.m in Sources */,
 				9F0034401AA03C2500766B33 /* ImageCache.m in Sources */,
