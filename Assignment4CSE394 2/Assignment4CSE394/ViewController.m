@@ -44,25 +44,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.manager = [[MovieManager alloc]init];
     self.manager.movieList =[[NSMutableArray alloc] init];
-    NSString *requestType = NYT_VALID_LIST_NAMES_URL;
-    NSURL *typeUrl = [NSURL URLWithString:requestType];
-    NSData *typeData =[NSData dataWithContentsOfURL:typeUrl];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:typeData options:kNilOptions error:Nil];
-    /*
-    NSString *tempResult = dict[@"num_results"];
-    self.manager.numOfTypes = tempResult.integerValue;
-    
-    NSArray *typeResults = [dict valueForKeyPath:@"results"];
-    
-    self.manager.movieTypeList =[[NSMutableArray alloc] init];
-    /*for(NSDictionary *movie in typeResults)
-    {
-        Movie *ourMovie = [[Movie alloc] init];
-        ourMovie.movieData = movie;
-        [self.manager.movieTypeList addObject:ourMovie];
-    }*/
+ 
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
     
@@ -71,7 +56,7 @@
     [self.ReadingListButton addTarget: self action:@selector(readListTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.TopMoviesButton addTarget: self action:@selector(topMoviesTapped:) forControlEvents:UIControlEventTouchUpInside];
-    //[self.LogoutButton addTarget: self action:@selector(logoutPressed:) forControlEvents:UIControlEventTouchUpInside];
+
     
 }
 
@@ -350,10 +335,13 @@
         dest.tableMovieArray = self.manager.movieList;
         dest.ShowAdd = 0;
     }
-    else{
+    else if (sender == self.ReadingListButton){
         TableViewController *dest = segue.destinationViewController;
         dest.tableMovieArray = self.watchedMovies;
         dest.ShowAdd = 1;
+    }
+    else{
+        //do nothing
     }
     
 }

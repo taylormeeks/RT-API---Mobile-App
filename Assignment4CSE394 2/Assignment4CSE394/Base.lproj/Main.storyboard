@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Movie Search-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -16,6 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l71-QP-Jok">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14858211595246451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="In-Theaters" image="curtain-ideas-pinterest.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="1" y="108" width="374" height="146"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="108" width="375" height="146"/>
+                                </variation>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUs-Nh-rJr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.60064420271331842" blue="0.47217769605722681" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,35 +49,40 @@
                                     <rect key="frame" x="0.0" y="400" width="375" height="146"/>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l71-QP-Jok">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.14858211595246451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="In-Theaters" image="curtain-ideas-pinterest.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="1" y="108" width="374" height="146"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="108" width="375" height="146"/>
-                                </variation>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Theaters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTj-Vr-tYJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Theaters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTj-Vr-tYJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="146" y="170" width="103" height="21"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="170" width="103" height="21"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-8p-7iz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-8p-7iz">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="136" y="320" width="103" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="294" width="103" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 25 Released" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R15-TF-eEu">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="457" width="124" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="453" width="153" height="21"/>
                                 </variation>
                             </label>
                             <searchBar contentMode="redraw" barStyle="black" placeholder="Search For A Movie" translatesAutoresizingMaskIntoConstraints="NO" id="PI5-FC-Ver">
@@ -78,45 +96,62 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="MPX-sa-U7w"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 25 Released" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R15-TF-eEu">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="457" width="124" height="21"/>
-                                </variation>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12198090531909861341man silhouette.svg.hi.png" translatesAutoresizingMaskIntoConstraints="NO" id="jee-Jq-FUo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="125" y="457" width="153" height="21"/>
+                                    <rect key="frame" x="0.0" y="545" width="125" height="123"/>
                                 </variation>
-                            </label>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55M-ko-gQ3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.0" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="545" width="250" height="123"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Bol-rJ-ZwW" kind="show" identifier="profileClicked" id="5DM-OX-uQg"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.49803921569999998" green="0.0" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="l71-QP-Jok"/>
                                 <exclude reference="nUs-Nh-rJr"/>
                                 <exclude reference="fht-Gq-i6x"/>
-                                <exclude reference="l71-QP-Jok"/>
                                 <exclude reference="pTj-Vr-tYJ"/>
                                 <exclude reference="zqb-8p-7iz"/>
-                                <exclude reference="PI5-FC-Ver"/>
                                 <exclude reference="R15-TF-eEu"/>
+                                <exclude reference="PI5-FC-Ver"/>
+                                <exclude reference="jee-Jq-FUo"/>
+                                <exclude reference="55M-ko-gQ3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="l71-QP-Jok"/>
                                 <include reference="nUs-Nh-rJr"/>
                                 <include reference="fht-Gq-i6x"/>
-                                <include reference="l71-QP-Jok"/>
                                 <include reference="pTj-Vr-tYJ"/>
                                 <include reference="zqb-8p-7iz"/>
-                                <include reference="PI5-FC-Ver"/>
                                 <include reference="R15-TF-eEu"/>
+                                <include reference="PI5-FC-Ver"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jee-Jq-FUo"/>
+                                <include reference="55M-ko-gQ3"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Movie Search" id="3gA-Pq-XbA">
+                    <navigationItem key="navigationItem" id="3gA-Pq-XbA">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="AWN-MQ-WoX">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="logoutPressed:" destination="vXZ-lx-hvc" id="7Mp-GM-okk"/>
                             </connections>
@@ -133,7 +168,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2884.5" y="571.5"/>
+            <point key="canvasLocation" x="2884.5" y="561"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="kmP-1O-fQ2">
+            <objects>
+                <viewController id="Bol-rJ-ZwW" customClass="UserProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lcg-fl-hxW"/>
+                        <viewControllerLayoutGuide type="bottom" id="gdN-TZ-q82"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zTd-cC-Iqy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="delegate" destination="zTd-cC-Iqy" id="QbT-Ek-WB7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUO-Et-w3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2884.5" y="1311"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ZcN-48-d0p">
@@ -336,7 +392,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y67-sN-Dch" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hXV-PQ-5g1">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="hXV-PQ-5g1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -351,6 +408,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="12198090531909861341man silhouette.svg.hi.png" width="600" height="568"/>
         <image name="curtain-ideas-pinterest.jpg" width="1600" height="1067"/>
         <image name="film-reel.jpg" width="1600" height="900"/>
         <image name="film_roll.png" width="800" height="318"/>
