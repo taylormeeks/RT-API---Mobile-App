@@ -12,6 +12,7 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIButton *chooseButton;
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 
 - (IBAction)getPic:(id)sender;
 

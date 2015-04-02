@@ -39,13 +39,17 @@
     UIImagePickerController * picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     
-    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    if((UIButton *) sender == self.chooseButton)
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
+    else
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+            //only presents camera if available otherwise shows Photo Library
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (IBAction)takePic:(id)sender {
-}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
