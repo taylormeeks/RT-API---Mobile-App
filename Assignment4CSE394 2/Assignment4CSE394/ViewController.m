@@ -124,7 +124,7 @@
             
         }
         
-        /*
+        
         PFUser *user = [PFUser currentUser];
         self.thisUser.picture = [user objectForKey:@"picture"];
         self.thisUser.bio = [user objectForKey:@"description"];
@@ -132,12 +132,14 @@
         self.thisUser.favMovie = [user objectForKey:@"favoritemovie"];
         self.thisUser.location = [user objectForKey:@"location"];
         
-        NSString *urlString = [NSString stringWithFormat:@"%@", self.thisUser.picture.url];
-        NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        [[ImageCache sharedInstance] downloadImageAtURL:url completionHandler:^(UIImage *image) {
+        if ([self.thisUser.picture.url length] > 1){
+            NSString *urlString = [NSString stringWithFormat:@"%@", self.thisUser.picture.url];
+            NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            [[ImageCache sharedInstance] downloadImageAtURL:url completionHandler:^(UIImage *image) {
             self.ProfilePic.image = image;
-        }];
-        */
+            }];
+        }
+        
     }];
     
 }
@@ -350,7 +352,6 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   // NSLog(@"%@", );
     if(sender == self.SearchButton){
         TableViewController *dest = segue.destinationViewController;
         dest.tableMovieArray = self.manager.movieList;
@@ -364,7 +365,9 @@
     else if (sender == self.ProfileButton){
         ProfileController *dest = segue.destinationViewController;
         dest.watchedMovies = self.watchedMovies;
-        dest.thisUser = self.thisUser;
+        if(self.thisUser.name != nil){
+            dest.thisUser = self.thisUser;
+        }
     }
     
 }

@@ -28,7 +28,7 @@
     self.chooseButton.hidden = YES;
     self.cameraButton.hidden = YES;
     
-    if(self.thisUser != nil){
+    if(self.thisUser.name != nil){
     self.nameField.text = self.thisUser.name;
     self.nameLabel.text = self.thisUser.name;
     
