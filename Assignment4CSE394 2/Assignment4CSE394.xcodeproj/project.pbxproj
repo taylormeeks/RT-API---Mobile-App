@@ -24,6 +24,8 @@
 		9FCEEE431ACB4171006D88F8 /* film-reel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE421ACB4171006D88F8 /* film-reel.jpg */; };
 		9FCEEE451ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */; };
 		9FCEEE4D1ACB4B3E006D88F8 /* Film-Strip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE4C1ACB4B3E006D88F8 /* Film-Strip.jpg */; };
+		9FE4E91B1ACDF9BA00624CF3 /* James copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FE4E9191ACDF9BA00624CF3 /* James copy.png */; };
+		9FE4E91C1ACDF9BA00624CF3 /* Remove James.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FE4E91A1ACDF9BA00624CF3 /* Remove James.png */; };
 		9FEB84361A9FBD2B002D40E7 /* MovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB84351A9FBD2B002D40E7 /* MovieManager.m */; };
 		9FEEE4D51ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEEE4D41ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png */; };
 		9FF2B6691A9EC3E900E480A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2B6681A9EC3E900E480A5 /* main.m */; };
@@ -81,6 +83,8 @@
 		9FCEEE421ACB4171006D88F8 /* film-reel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "film-reel.jpg"; sourceTree = "<group>"; };
 		9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "o-MOVIE-THEATER-SEATS-facebook.jpg"; sourceTree = "<group>"; };
 		9FCEEE4C1ACB4B3E006D88F8 /* Film-Strip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Film-Strip.jpg"; sourceTree = "<group>"; };
+		9FE4E9191ACDF9BA00624CF3 /* James copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "James copy.png"; sourceTree = "<group>"; };
+		9FE4E91A1ACDF9BA00624CF3 /* Remove James.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Remove James.png"; sourceTree = "<group>"; };
 		9FEB84341A9FBD2B002D40E7 /* MovieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieManager.h; sourceTree = "<group>"; };
 		9FEB84351A9FBD2B002D40E7 /* MovieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieManager.m; sourceTree = "<group>"; };
 		9FEEE4D41ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12198090531909861341man silhouette.svg.hi.png"; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		9FF2B6661A9EC3E900E480A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9FE4E9191ACDF9BA00624CF3 /* James copy.png */,
+				9FE4E91A1ACDF9BA00624CF3 /* Remove James.png */,
 				9F94A9721ACCA79E00ECD295 /* Art-Deco-Series-290.jpg */,
 				9F94A9701ACCA28700ECD295 /* stock-footage-theater-marquee.jpg */,
 				9FEEE4D41ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png */,
@@ -341,7 +347,9 @@
 				9F94A9711ACCA28700ECD295 /* stock-footage-theater-marquee.jpg in Resources */,
 				9FCEEE451ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg in Resources */,
 				9FEEE4D51ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png in Resources */,
+				9FE4E91C1ACDF9BA00624CF3 /* Remove James.png in Resources */,
 				9F94A9731ACCA79E00ECD295 /* Art-Deco-Series-290.jpg in Resources */,
+				9FE4E91B1ACDF9BA00624CF3 /* James copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

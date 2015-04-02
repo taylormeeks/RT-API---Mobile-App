@@ -241,9 +241,6 @@
                                 <state key="normal" title="Choose Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="270" width="79" height="30"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="41" y="230" width="106" height="30"/>
                                 </variation>
@@ -266,9 +263,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="dis" image="12198090531909861341man silhouette.svg.hi.png" translatesAutoresizingMaskIntoConstraints="NO" id="U29-ku-EZ5">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="24" y="65" width="183" height="182"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="72" width="157" height="157"/>
                                 </variation>
@@ -579,32 +573,6 @@
                                     <rect key="frame" x="25" y="341" width="123" height="149"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56G-7j-uZk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.78119081439393945" blue="0.00023914109553785921" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Add To Watch List" image="film_roll.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="105" y="499" width="211" height="70"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="95" y="521" width="211" height="70"/>
-                                </variation>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To Watch List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2R-rM-5mP">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="535" width="167" height="21"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="116" y="557" width="167" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzM-wt-xVu">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -629,14 +597,23 @@
                                     <rect key="frame" x="60" y="165" width="253" height="76.5"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIG-5Y-ixU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="api-aH-W90">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="remove">
+                                <state key="normal" image="James copy.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="95" y="612" width="211" height="70"/>
+                                    <rect key="frame" x="52" y="505" width="268" height="138"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIG-5Y-ixU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="remove" image="Remove James.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="52" y="505" width="268" height="138"/>
                                 </variation>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="show" identifier="removeDone" id="T7M-ob-ScA"/>
@@ -652,10 +629,9 @@
                                 <exclude reference="4A5-p1-QSM"/>
                                 <exclude reference="Zdb-gR-XvP"/>
                                 <exclude reference="Et3-eh-lpn"/>
-                                <exclude reference="56G-7j-uZk"/>
-                                <exclude reference="K2R-rM-5mP"/>
                                 <exclude reference="AzM-wt-xVu"/>
                                 <exclude reference="TZp-oA-6DR"/>
+                                <exclude reference="api-aH-W90"/>
                                 <exclude reference="OIG-5Y-ixU"/>
                             </mask>
                         </variation>
@@ -665,8 +641,6 @@
                                 <include reference="4A5-p1-QSM"/>
                                 <include reference="Zdb-gR-XvP"/>
                                 <include reference="Et3-eh-lpn"/>
-                                <include reference="56G-7j-uZk"/>
-                                <include reference="K2R-rM-5mP"/>
                                 <include reference="AzM-wt-xVu"/>
                             </mask>
                         </variation>
@@ -675,13 +649,13 @@
                                 <include reference="IPw-lK-6Ls"/>
                                 <include reference="ex5-8J-Fm3"/>
                                 <include reference="TZp-oA-6DR"/>
+                                <include reference="api-aH-W90"/>
                                 <include reference="OIG-5Y-ixU"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="AddToListLabel" destination="K2R-rM-5mP" id="2pP-oc-U4r"/>
-                        <outlet property="AddToReadListButton" destination="56G-7j-uZk" id="ro8-KJ-bqg"/>
+                        <outlet property="AddToReadListButton" destination="api-aH-W90" id="3WB-8a-bUW"/>
                         <outlet property="DescriptionLabel" destination="AzM-wt-xVu" id="4f7-si-V0T"/>
                         <outlet property="ImageField" destination="Et3-eh-lpn" id="koZ-7w-Mx1"/>
                         <outlet property="MultiLineTitleLabel" destination="TZp-oA-6DR" id="TJh-pA-21H"/>
@@ -718,9 +692,10 @@
     <resources>
         <image name="12198090531909861341man silhouette.svg.hi.png" width="600" height="568"/>
         <image name="Art-Deco-Series-290.jpg" width="290" height="530"/>
+        <image name="James copy.png" width="640" height="330"/>
+        <image name="Remove James.png" width="640" height="330"/>
         <image name="curtain-ideas-pinterest.jpg" width="1600" height="1067"/>
         <image name="film-reel.jpg" width="1600" height="900"/>
-        <image name="film_roll.png" width="800" height="318"/>
         <image name="o-MOVIE-THEATER-SEATS-facebook.jpg" width="1536" height="1025"/>
         <image name="stock-footage-theater-marquee.jpg" width="400" height="266"/>
     </resources>
