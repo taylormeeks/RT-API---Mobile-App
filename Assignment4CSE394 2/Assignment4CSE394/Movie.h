@@ -12,13 +12,14 @@
 
 @property NSDictionary *movieData;
 
-@property NSURL *movieImage;
-@property NSURL *movieAmazonLink;
-@property NSString *movieTitle;
-@property NSString *movieAuthor;
-@property NSString *movieDescription;
-@property NSString * movieRating;
-@property NSString* movieYear;
-@property NSString *movieType;
+@property (nonatomic) NSURL *movieImage;
+@property (nonatomic) NSURL *movieAmazonLink;
+@property (nonatomic) NSString *movieTitle;
+@property (nonatomic) NSString *movieAuthor;
+@property (nonatomic) NSString *movieDescription;
+@property (nonatomic) NSString * movieRating;
+@property (nonatomic) NSString* movieYear;
+@property (nonatomic) NSString *movieType;
+@property (nonatomic) NSString *movieID;
 
 @end

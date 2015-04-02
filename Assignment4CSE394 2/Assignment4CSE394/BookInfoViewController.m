@@ -10,13 +10,14 @@
 
 @interface BookInfoViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *TitleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *AuthorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *MultiLineTitleLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *ImageField;
+@property (strong, nonatomic) IBOutlet UIButton *RemoveFromListButton;
 @property (strong, nonatomic) IBOutlet UILabel *DescriptionLabel;
-@property (strong, nonatomic) IBOutlet UILabel *AmazonLink;
 @property (strong, nonatomic) IBOutlet UILabel *RankLabel;
 @property (strong, nonatomic) IBOutlet UILabel *WeekLabel;
 @property (strong, nonatomic) IBOutlet UIButton *AddToReadListButton;
+@property (strong, nonatomic) IBOutlet UILabel *AddToListLabel;
 @property NSString *imageString;
 @property NSString *amazonString;
 @end
@@ -25,18 +26,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(self.showAdd == 1){ //1 = hide
+    if(self.showAdd == 0){
+        self.RemoveFromListButton.hidden = true;
+    }
+    else if(self.showAdd == 1){ //1 = hide
         self.AddToReadListButton.hidden = true;
+        self.AddToListLabel.hidden = true;
+        self.RemoveFromListButton.hidden = false;
     }
     [self.AddToReadListButton addTarget: self action:@selector(addToReadListClicked:) forControlEvents:UIControlEventTouchUpInside];
-    self.DescriptionLabel.numberOfLines = 5;
-    self.TitleLabel.numberOfLines = 3;
-    self.AuthorLabel.numberOfLines = 2;
     
     _imageString = [self.selectedMovie.movieImage absoluteString];
     self.ImageField.image = [[ImageCache sharedInstance] imageForKey:_imageString]; //retrieve cached image
-    self.TitleLabel.text = self.selectedMovie.movieTitle;
-    self.AuthorLabel.text = self.selectedMovie.movieAuthor;
+    
+    if(self.selectedMovie.movieTitle.length > 31){
+        self.MultiLineTitleLabel.hidden = false;
+        self.TitleLabel.hidden = true;
+        self.MultiLineTitleLabel.text = self.selectedMovie.movieTitle;
+    }
+    else{
+        self.MultiLineTitleLabel.hidden = true;
+        self.TitleLabel.text = self.selectedMovie.movieTitle;
+    }
+    [self.TitleLabel sizeToFit];
     
     NSString * rankString = @"";
     rankString = [rankString stringByAppendingFormat:@"Rating: %@",self.selectedMovie.movieRating];
@@ -47,10 +59,11 @@
     self.WeekLabel.text = weekString;
     
     self.DescriptionLabel.text= self.selectedMovie.movieDescription;
-    
-    _amazonString = @"";
-    _amazonString = [_amazonString stringByAppendingFormat:@"Buy: %@",[self.selectedMovie.movieAmazonLink absoluteString]];
-    self.AmazonLink.text = _amazonString;
+    if ([self.selectedMovie.movieDescription length] < 1){
+        self.DescriptionLabel.text = @"No Description Available";
+    }
+
+    [self.RemoveFromListButton addTarget: self action:@selector(removeTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     //self.AmazonLink.text = self.selectedMovie.bookAmazonLink;
     // Do any additional setup after loading the view.
@@ -66,7 +79,7 @@
     [player setObject:self.selectedMovie.movieDescription forKey:@"movieDescription"];
     [player setObject:self.selectedMovie.movieYear forKey:@"movieYear"];
     [player setObject:self.selectedMovie.movieAuthor forKey:@"movieAuthor"];
-    [player setObject:_amazonString forKey:@"movieAmazon"];
+    //[player setObject:_amazonString forKey:@"movieAmazon"];
     [player setObject:[[PFUser currentUser] username] forKey:@"user"];
     [player save];
 }
@@ -76,14 +89,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+-(void)removeTapped:(id)sender
+{
+    PFObject *object = [PFObject objectWithoutDataWithClassName:@"Movie"
+                                                       objectId:self.selectedMovie.movieID];
+    [object deleteEventually];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    
 }
-*/
+
 
 @end

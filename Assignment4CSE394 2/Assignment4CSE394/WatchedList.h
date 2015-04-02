@@ -17,4 +17,5 @@
 @property NSString * movieRating;
 @property NSString* movieYear;
 @property NSString *movieType;
+@property NSString *movieID;
 @end

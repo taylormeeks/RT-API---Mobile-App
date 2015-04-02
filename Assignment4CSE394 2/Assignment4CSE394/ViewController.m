@@ -115,6 +115,9 @@
             NSURL *url2 = [NSURL URLWithString:[rewriteString7 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             newMovie.movieAmazonLink= url2;
             
+            NSString *rewriteString8 = [object objectId];
+            newMovie.movieID = rewriteString8;
+            
             [self.watchedMovies addObject:newMovie];
             
         }

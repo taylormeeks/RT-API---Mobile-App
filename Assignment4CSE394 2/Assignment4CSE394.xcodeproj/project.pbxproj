@@ -16,7 +16,8 @@
 		9F48810B1AB330C20087D74E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48810A1AB330C20087D74E /* Parse.framework */; };
 		9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F758E8D1AA41B7800B0967B /* WatchedList.m */; };
 		9F85CF7E1AA0CC45008506E5 /* BookInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */; };
-		9F94A96F1ACC9F1200ECD295 /* theater-sign-template.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F94A96E1ACC9F1200ECD295 /* theater-sign-template.jpg */; };
+		9F94A9711ACCA28700ECD295 /* stock-footage-theater-marquee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F94A9701ACCA28700ECD295 /* stock-footage-theater-marquee.jpg */; };
+		9F94A9731ACCA79E00ECD295 /* Art-Deco-Series-290.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F94A9721ACCA79E00ECD295 /* Art-Deco-Series-290.jpg */; };
 		9FB5E0E41A9FF956002E0FC3 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5E0E31A9FF956002E0FC3 /* Movie.m */; };
 		9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */; };
 		9FCEEE411ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FCEEE401ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg */; };
@@ -70,7 +71,8 @@
 		9F758E8D1AA41B7800B0967B /* WatchedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchedList.m; sourceTree = "<group>"; };
 		9F85CF7C1AA0CC45008506E5 /* BookInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoViewController.h; sourceTree = "<group>"; };
 		9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewController.m; sourceTree = "<group>"; };
-		9F94A96E1ACC9F1200ECD295 /* theater-sign-template.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "theater-sign-template.jpg"; sourceTree = "<group>"; };
+		9F94A9701ACCA28700ECD295 /* stock-footage-theater-marquee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stock-footage-theater-marquee.jpg"; sourceTree = "<group>"; };
+		9F94A9721ACCA79E00ECD295 /* Art-Deco-Series-290.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Art-Deco-Series-290.jpg"; sourceTree = "<group>"; };
 		9FB5E0E21A9FF956002E0FC3 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		9FB5E0E31A9FF956002E0FC3 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		9FCEEE3E1ACB3DC7006D88F8 /* film_roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = film_roll.png; sourceTree = "<group>"; };
@@ -191,7 +193,8 @@
 		9FF2B6661A9EC3E900E480A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9F94A96E1ACC9F1200ECD295 /* theater-sign-template.jpg */,
+				9F94A9721ACCA79E00ECD295 /* Art-Deco-Series-290.jpg */,
+				9F94A9701ACCA28700ECD295 /* stock-footage-theater-marquee.jpg */,
 				9FEEE4D41ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png */,
 				9FCEEE4C1ACB4B3E006D88F8 /* Film-Strip.jpg */,
 				9FCEEE441ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg */,
@@ -329,10 +332,11 @@
 				9FCEEE4D1ACB4B3E006D88F8 /* Film-Strip.jpg in Resources */,
 				9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */,
 				9FF2B6741A9EC3E900E480A5 /* Images.xcassets in Resources */,
-				9F94A96F1ACC9F1200ECD295 /* theater-sign-template.jpg in Resources */,
 				9FCEEE431ACB4171006D88F8 /* film-reel.jpg in Resources */,
+				9F94A9711ACCA28700ECD295 /* stock-footage-theater-marquee.jpg in Resources */,
 				9FCEEE451ACB42DA006D88F8 /* o-MOVIE-THEATER-SEATS-facebook.jpg in Resources */,
 				9FEEE4D51ACB89720027BB74 /* 12198090531909861341man silhouette.svg.hi.png in Resources */,
+				9F94A9731ACCA79E00ECD295 /* Art-Deco-Series-290.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
