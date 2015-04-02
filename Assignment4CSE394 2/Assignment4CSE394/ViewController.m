@@ -28,6 +28,7 @@
 
 @interface ViewController () 
 @property (strong, nonatomic) IBOutlet UISearchBar *SearchBar;
+@property (strong, nonatomic) IBOutlet UIImageView *ProfilePic;
 @property (strong, nonatomic) IBOutlet UIButton *SearchButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *LogoutButton;
 @property (strong, nonatomic) IBOutlet UIButton *ReadingListButton;
@@ -45,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.thisUser = [[User alloc]init];
     self.manager = [[MovieManager alloc]init];
     self.manager.movieList =[[NSMutableArray alloc] init];
  
@@ -57,6 +58,7 @@
     [self.ReadingListButton addTarget: self action:@selector(readListTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.TopMoviesButton addTarget: self action:@selector(topMoviesTapped:) forControlEvents:UIControlEventTouchUpInside];
+
 
     
 }
@@ -121,6 +123,20 @@
             [self.watchedMovies addObject:newMovie];
             
         }
+        
+        PFUser *user = [PFUser currentUser];
+        self.thisUser.picture = [user objectForKey:@"picture"];
+        self.thisUser.bio = [user objectForKey:@"description"];
+        self.thisUser.name = [user objectForKey:@"name"];
+        self.thisUser.favMovie = [user objectForKey:@"favoritemovie"];
+        self.thisUser.location = [user objectForKey:@"location"];
+        
+        NSString *urlString = [NSString stringWithFormat:@"%@", self.thisUser.picture.url];
+        NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        [[ImageCache sharedInstance] downloadImageAtURL:url completionHandler:^(UIImage *image) {
+            self.ProfilePic.image = image;
+        }];
+        
     }];
     
 }
@@ -347,6 +363,7 @@
     else if (sender == self.ProfileButton){
         ProfileController *dest = segue.destinationViewController;
         dest.watchedMovies = self.watchedMovies;
+        dest.thisUser = self.thisUser;
     }
     
 }

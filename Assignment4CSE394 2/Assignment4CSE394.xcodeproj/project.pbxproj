@@ -44,6 +44,7 @@
 		9FF2B69F1A9EC49900E480A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF2B69E1A9EC49900E480A5 /* SystemConfiguration.framework */; };
 		9FF2B6A11A9EC4A200E480A5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF2B6A01A9EC4A200E480A5 /* libz.dylib */; };
 		9FF2B6A31A9EC4AC00E480A5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF2B6A21A9EC4AC00E480A5 /* libsqlite3.dylib */; };
+		9FFE580D1ACDE7E100B80EA3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE580C1ACDE7E100B80EA3 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		9FF2B69E1A9EC49900E480A5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9FF2B6A01A9EC4A200E480A5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9FF2B6A21A9EC4AC00E480A5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9FFE580B1ACDE7E100B80EA3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		9FFE580C1ACDE7E100B80EA3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 				9F85CF7D1AA0CC45008506E5 /* BookInfoViewController.m */,
 				9F758E8C1AA41B7800B0967B /* WatchedList.h */,
 				9F758E8D1AA41B7800B0967B /* WatchedList.m */,
+				9FFE580B1ACDE7E100B80EA3 /* User.h */,
+				9FFE580C1ACDE7E100B80EA3 /* User.m */,
 			);
 			path = Assignment4CSE394;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				9F758E8E1AA41B7800B0967B /* WatchedList.m in Sources */,
 				9FF2B66F1A9EC3E900E480A5 /* ViewController.m in Sources */,
 				9FF2B66C1A9EC3E900E480A5 /* AppDelegate.m in Sources */,
+				9FFE580D1ACDE7E100B80EA3 /* User.m in Sources */,
 				9FEB84361A9FBD2B002D40E7 /* MovieManager.m in Sources */,
 				9F00343D1AA03A8100766B33 /* TableViewController.m in Sources */,
 				9F0034401AA03C2500766B33 /* ImageCache.m in Sources */,

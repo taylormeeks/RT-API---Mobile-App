@@ -62,13 +62,13 @@
          contextName = "-[ReadingListTableViewController tableView:cellForRowAtIndexPath:]:ReadingListTableViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath">
+               value = "_readingListBooks">
             </PersistentString>
             <PersistentString
                value = "book.bookImage">
             </PersistentString>
             <PersistentString
-               value = "_readingListBooks">
+               value = "indexPath">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -93,13 +93,13 @@
          contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "cell.imageView.image">
+               value = "sharedInstance">
             </PersistentString>
             <PersistentString
                value = "book.bookImage">
             </PersistentString>
             <PersistentString
-               value = "sharedInstance">
+               value = "cell.imageView.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -155,6 +155,9 @@
          contextName = "__46-[ViewController loadBooksWithCompletionBlock]_block_invoke:ViewController.m">
          <PersistentStrings>
             <PersistentString
+               value = "self.thisUser">
+            </PersistentString>
+            <PersistentString
                value = "self.readingListBooks">
             </PersistentString>
          </PersistentStrings>
@@ -180,10 +183,10 @@
          contextName = "-[TableViewController prepareForSegue:sender:]:TableViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "dest.selectedBook.bookTitle">
+               value = "dest.selectedBookImage">
             </PersistentString>
             <PersistentString
-               value = "dest.selectedBookImage">
+               value = "dest.selectedBook.bookTitle">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -191,10 +194,13 @@
          contextName = "-[ViewController requestBookswithTitle:]:ViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "results[0]">
+               value = "self.manager.bookList [0]">
             </PersistentString>
             <PersistentString
                value = "books">
+            </PersistentString>
+            <PersistentString
+               value = "results[0]">
             </PersistentString>
             <PersistentString
                value = "self.manager.bookList ">
@@ -202,8 +208,13 @@
             <PersistentString
                value = "self.manager.bookList[0].movieData">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ProfileController viewDidLoad]:ProfileController.m">
+         <PersistentStrings>
             <PersistentString
-               value = "self.manager.bookList [0]">
+               value = "self.thisUser">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

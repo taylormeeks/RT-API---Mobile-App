@@ -13,10 +13,12 @@
 #import <ParseUI/ParseUI.h>
 #import "WatchedList.h"
 #import "ImageCache.h"
+#import "User.h"
 
 @interface ProfileController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property NSMutableArray *watchedMovies;
+@property NSArray *watchedMovies;
+@property User *thisUser;
 
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIButton *chooseButton;

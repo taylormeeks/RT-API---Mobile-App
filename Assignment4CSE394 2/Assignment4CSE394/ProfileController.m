@@ -28,6 +28,27 @@
     self.chooseButton.hidden = YES;
     self.cameraButton.hidden = YES;
     
+    if(self.thisUser != nil){
+    self.nameField.text = self.thisUser.name;
+    self.nameLabel.text = self.thisUser.name;
+    
+    self.favMovieField.text = self.thisUser.favMovie;
+    self.favMovieLabel.text = self.thisUser.favMovie;
+        
+    self.homeField.text = self.thisUser.location;
+    self.homeLabel.text = self.thisUser.location;
+        
+    self.bioText.text = self.thisUser.bio;
+        
+        NSString *urlString = [NSString stringWithFormat:@"%@", self.thisUser.picture.url];
+        NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        [[ImageCache sharedInstance] downloadImageAtURL:url completionHandler:^(UIImage *image) {
+            self.imageView.image = image;
+        }];
+    
+        
+    }
+    
     self.watchedMovies = [[self.watchedMovies reverseObjectEnumerator] allObjects];
     
 }
@@ -129,5 +150,23 @@
     self.favMovieField.hidden = YES;
     self.homeField.hidden = YES;
     self.bioText.editable = NO;
+    
+    // Convert to JPEG with 50% quality
+    NSData* data = UIImageJPEGRepresentation(self.imageView.image, 0.5f);
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        PFUser *user = [PFUser currentUser];
+        [user setObject:imageFile forKey:@"picture"];
+        [user setObject:self.bioText.text forKey:@"description"];
+        [user setObject:self.nameLabel.text forKey:@"name"];
+        [user setObject:self.favMovieLabel.text forKey:@"favoritemovie"];
+        [user setObject:self.homeLabel.text forKey:@"location"];
+        [user saveInBackground];
+        
+    }];
+    
+    
 }
 @end

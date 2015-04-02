@@ -15,9 +15,10 @@
 #import <ParseUI/ParseUI.h>
 #import "WatchedList.h"
 #import "ProfileController.h"
+#import "User.h"
 @interface ViewController : UIViewController
 
 @property MovieManager *manager;
-
+@property User *thisUser;
 @end
 
