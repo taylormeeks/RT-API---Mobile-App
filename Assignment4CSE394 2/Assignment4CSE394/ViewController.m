@@ -124,6 +124,7 @@
             
         }
         
+        /*
         PFUser *user = [PFUser currentUser];
         self.thisUser.picture = [user objectForKey:@"picture"];
         self.thisUser.bio = [user objectForKey:@"description"];
@@ -136,7 +137,7 @@
         [[ImageCache sharedInstance] downloadImageAtURL:url completionHandler:^(UIImage *image) {
             self.ProfilePic.image = image;
         }];
-        
+        */
     }];
     
 }
