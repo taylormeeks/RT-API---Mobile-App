@@ -38,21 +38,21 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     //sets recently watched movie images and titles
-    if(self.watchedMovies[0] != nil)
+    if([self.watchedMovies count] > 0)
     {
         [[ImageCache sharedInstance] downloadImageAtURL:[self.watchedMovies[0] movieImage] completionHandler:^(UIImage *image) {
             self.movie1Image.image = image;
         }];
         self.movie1Label.text = [self.watchedMovies[0] movieTitle];
     }
-    if(self.watchedMovies[1] != nil)
+    if([self.watchedMovies count] > 1)
     {
         [[ImageCache sharedInstance] downloadImageAtURL:[self.watchedMovies[1] movieImage] completionHandler:^(UIImage *image) {
             self.movie2Image.image = image;
         }];
         self.movie2Label.text = [self.watchedMovies[1] movieTitle];
     }
-    if(self.watchedMovies[2] != nil)
+    if([self.watchedMovies count] > 2)
     {
         [[ImageCache sharedInstance] downloadImageAtURL:[self.watchedMovies[2] movieImage] completionHandler:^(UIImage *image) {
             self.movie3Image.image = image;
