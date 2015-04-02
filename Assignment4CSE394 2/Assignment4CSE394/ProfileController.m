@@ -16,13 +16,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.nameField.text = self.nameLabel.text;
+    self.favMovieField.text = self.favMovieLabel.text;
+    self.homeField.text = self.homeLabel.text;
+    self.nameField.hidden = YES;
+    self.favMovieField.hidden = YES;
+    self.homeField.hidden = YES;
+    self.saveButton.hidden = YES;
+    self.bioText.editable = NO;
+    
+    self.watchedMovies = [[self.watchedMovies reverseObjectEnumerator] allObjects];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    //sets recently watched movie images and titles
+    if(self.watchedMovies[0] != nil)
+    {
+        [[ImageCache sharedInstance] downloadImageAtURL:[self.watchedMovies[0] movieImage] completionHandler:^(UIImage *image) {
+            self.movie1Image.image = image;
+        }];
+        self.movie1Label.text = [self.watchedMovies[0] movieTitle];
+    }
+    if(self.watchedMovies[1] != nil)
+    {
+        [[ImageCache sharedInstance] downloadImageAtURL:[self.watchedMovies[1] movieImage] completionHandler:^(UIImage *image) {
+            self.movie2Image.image = image;
+        }];
+        self.movie2Label.text = [self.watchedMovies[1] movieTitle];
+    }
+    if(self.watchedMovies[2] != nil)
+    {
+        [[ImageCache sharedInstance] downloadImageAtURL:[self.watchedMovies[2] movieImage] completionHandler:^(UIImage *image) {
+            self.movie3Image.image = image;
+        }];
+        self.movie3Label.text = [self.watchedMovies[2] movieTitle];
+    }
+}
+
+
 
 /*
 #pragma mark - Navigation
@@ -50,10 +89,39 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [self dismissViewControllerAnimated:YES completion:nil];
     self.imageView.image = (UIImage*) [info objectForKey:UIImagePickerControllerOriginalImage];
+}
+
+- (IBAction)editProfile:(id)sender
+{
+    self.saveButton.hidden = NO;
+    self.editButton.hidden = YES;
+    self.nameLabel.hidden = YES;
+    self.favMovieLabel.hidden = YES;
+    self.homeLabel.hidden = YES;
+    self.nameField.hidden = NO;
+    self.favMovieField.hidden = NO;
+    self.homeField.hidden = NO;
+    self.bioText.editable = YES;
+}
+
+- (IBAction)saveProfile:(id)sender
+{
+    self.nameLabel.text = self.nameField.text;
+    self.favMovieLabel.text = self.favMovieField.text;
+    self.homeLabel.text = self.homeField.text;
+    
+    self.saveButton.hidden = YES;
+    self.editButton.hidden = NO;
+    self.nameLabel.hidden = NO;
+    self.favMovieLabel.hidden = NO;
+    self.homeLabel.hidden = NO;
+    self.nameField.hidden = YES;
+    self.favMovieField.hidden = YES;
+    self.homeField.hidden = YES;
+    self.bioText.editable = NO;
 }
 @end

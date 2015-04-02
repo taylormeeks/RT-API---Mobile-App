@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *ReadingListButton;
 @property (strong, nonatomic) IBOutlet UIButton *InTheatersButton;
 @property (strong, nonatomic) IBOutlet UIButton *TopMoviesButton;
+@property (strong, nonatomic) IBOutlet UIButton *ProfileButton;
 @property NSMutableArray *watchedMovies;
 @end
 
@@ -340,8 +341,9 @@
         dest.tableMovieArray = self.watchedMovies;
         dest.ShowAdd = 1;
     }
-    else{
-        //do nothing
+    else if (sender == self.ProfileButton){
+        ProfileController *dest = segue.destinationViewController;
+        dest.watchedMovies = self.watchedMovies;
     }
     
 }

@@ -14,6 +14,7 @@
 #import "TableViewController.h"
 #import <ParseUI/ParseUI.h>
 #import "WatchedList.h"
+#import "ProfileController.h"
 @interface ViewController : UIViewController
 
 @property MovieManager *manager;
