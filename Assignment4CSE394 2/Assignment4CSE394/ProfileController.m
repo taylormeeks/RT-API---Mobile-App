@@ -25,6 +25,8 @@
     self.homeField.hidden = YES;
     self.saveButton.hidden = YES;
     self.bioText.editable = NO;
+    self.chooseButton.hidden = YES;
+    self.cameraButton.hidden = YES;
     
     self.watchedMovies = [[self.watchedMovies reverseObjectEnumerator] allObjects];
     
@@ -97,6 +99,8 @@
 
 - (IBAction)editProfile:(id)sender
 {
+    self.chooseButton.hidden = NO;
+    self.cameraButton.hidden = NO;
     self.saveButton.hidden = NO;
     self.editButton.hidden = YES;
     self.nameLabel.hidden = YES;
@@ -114,6 +118,8 @@
     self.favMovieLabel.text = self.favMovieField.text;
     self.homeLabel.text = self.homeField.text;
     
+    self.chooseButton.hidden = YES;
+    self.cameraButton.hidden = YES;
     self.saveButton.hidden = YES;
     self.editButton.hidden = NO;
     self.nameLabel.hidden = NO;
