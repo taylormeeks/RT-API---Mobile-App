@@ -139,6 +139,10 @@
             self.ProfilePic.image = image;
             }];
         }
+       else{
+            UIImage * placeholderImage = [UIImage imageNamed: @"12198090531909861341man silhouette.svg.hi"];
+           self.ProfilePic.image = placeholderImage;
+        }
         
     }];
     
