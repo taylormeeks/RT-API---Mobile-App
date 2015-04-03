@@ -359,6 +359,7 @@
     if(sender == self.SearchButton){
         TableViewController *dest = segue.destinationViewController;
         dest.tableMovieArray = self.manager.movieList;
+        dest.watchedMovies = self.watchedMovies;
         dest.ShowAdd = 0;
     }
     else if (sender == self.ReadingListButton){

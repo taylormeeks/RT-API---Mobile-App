@@ -466,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kq9-ie-suE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2977.5" y="1329"/>
+            <point key="canvasLocation" x="2884.5" y="1326.75"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ZcN-48-d0p">
@@ -605,6 +605,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="52" y="505" width="268" height="138"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="xtj-7I-4JC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIG-5Y-ixU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>

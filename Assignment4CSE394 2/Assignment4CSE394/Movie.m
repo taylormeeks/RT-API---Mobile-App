@@ -66,4 +66,12 @@
           aCoder encodeObject:self.movieData forKey:DATA_KEY];
 }
 
+- (BOOL)isEqual:(Movie*)other {
+    if([other.movieTitle isEqual:self.movieTitle])
+        return TRUE;
+    else{
+        return FALSE;
+    }
+}
+
 @end

@@ -34,6 +34,10 @@
         self.AddToListLabel.hidden = true;
         self.RemoveFromListButton.hidden = false;
     }
+    if ([self.watchedMovies containsObject:self.selectedMovie] || [self.selectedMovie.movieTitle isEqualToString:self.backedMovie]){
+        self.AddToReadListButton.hidden = true;
+    }
+    
     [self.AddToReadListButton addTarget: self action:@selector(addToReadListClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     _imageString = [self.selectedMovie.movieImage absoluteString];
@@ -49,6 +53,7 @@
         self.TitleLabel.text = self.selectedMovie.movieTitle;
     }
     [self.TitleLabel sizeToFit];
+   
     
     NSString * rankString = @"";
     rankString = [rankString stringByAppendingFormat:@"Rating: %@",self.selectedMovie.movieRating];
@@ -72,6 +77,7 @@
 -(void)addToReadListClicked:(id)sender
 {
     
+    self.AddToReadListButton.hidden = true;
     PFObject *player = [PFObject objectWithClassName:@"Movie"];
     [player setObject:self.selectedMovie.movieTitle forKey:@"movieTitle"];
     [player setObject:_imageString forKey:@"movieImage"];

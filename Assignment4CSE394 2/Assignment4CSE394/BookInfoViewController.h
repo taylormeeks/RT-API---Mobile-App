@@ -11,4 +11,6 @@
 @interface BookInfoViewController : UIViewController
 @property Movie* selectedMovie;
 @property int showAdd;//0 = show, 1 = hide, 2 = remove
+@property NSMutableArray *watchedMovies;
+@property NSString *backedMovie;
 @end

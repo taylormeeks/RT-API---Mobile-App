@@ -13,4 +13,6 @@
 @interface TableViewController : UITableViewController 
 @property NSMutableArray *tableMovieArray;
 @property int ShowAdd; //0 = show, 1 = hide, 2 = remove
+@property NSMutableArray *watchedMovies;
+@property NSString *backedMovie; 
 @end
