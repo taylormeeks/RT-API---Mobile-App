@@ -54,7 +54,7 @@
     cell.textLabel.numberOfLines = 2;
     cell.textLabel.font = [UIFont systemFontOfSize:12];
     cell.textLabel.text = displayString;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     // Configure the cell...
     if(movie.movieImage != nil){
         [[ImageCache sharedInstance] downloadImageAtURL:movie.movieImage completionHandler:^(UIImage *image) {
@@ -73,7 +73,7 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
     self.selectedMovie = self.tableMovieArray[indexPath.row];
     [self performSegueWithIdentifier:@"BookInfoClicked" sender:self];

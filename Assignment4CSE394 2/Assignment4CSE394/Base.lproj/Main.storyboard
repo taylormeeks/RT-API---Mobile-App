@@ -472,7 +472,7 @@
         <scene sceneID="ZcN-48-d0p">
             <objects>
                 <tableViewController id="rpG-iC-HjF" customClass="TableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" id="wrX-Dh-2Vf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" id="wrX-Dh-2Vf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.72575363005050497" green="0.18698980813579605" blue="0.13421462188601319" alpha="0.0" colorSpace="calibratedRGB"/>
