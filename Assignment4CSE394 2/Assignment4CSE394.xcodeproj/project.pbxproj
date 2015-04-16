@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07EBE9941ADF4368009D8B4A /* tt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07EBE9931ADF4368009D8B4A /* tt.jpg */; };
 		2CA062161ACCAC0600ACE25C /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA062151ACCAC0600ACE25C /* ProfileController.m */; };
 		9F00343D1AA03A8100766B33 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F00343C1AA03A8100766B33 /* TableViewController.m */; };
 		9F0034401AA03C2500766B33 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F00343F1AA03C2500766B33 /* ImageCache.m */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07EBE9931ADF4368009D8B4A /* tt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tt.jpg; sourceTree = "<group>"; };
 		2CA062141ACCAC0600ACE25C /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
 		2CA062151ACCAC0600ACE25C /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
 		9F00343B1AA03A8100766B33 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		9FF2B6661A9EC3E900E480A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07EBE9931ADF4368009D8B4A /* tt.jpg */,
 				9FE4E9191ACDF9BA00624CF3 /* James copy.png */,
 				9FE4E91A1ACDF9BA00624CF3 /* Remove James.png */,
 				9F94A9721ACCA79E00ECD295 /* Art-Deco-Series-290.jpg */,
@@ -340,6 +343,7 @@
 				9FF2B6721A9EC3E900E480A5 /* Main.storyboard in Resources */,
 				9FCEEE411ACB3F2C006D88F8 /* curtain-ideas-pinterest.jpg in Resources */,
 				9FF2B6771A9EC3E900E480A5 /* LaunchScreen.xib in Resources */,
+				07EBE9941ADF4368009D8B4A /* tt.jpg in Resources */,
 				9FCEEE4D1ACB4B3E006D88F8 /* Film-Strip.jpg in Resources */,
 				9FCEEE3F1ACB3DC7006D88F8 /* film_roll.png in Resources */,
 				9FF2B6741A9EC3E900E480A5 /* Images.xcassets in Resources */,
