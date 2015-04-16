@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 @interface MovieManager : NSObject
-
+//
 @property (nonatomic) NSMutableArray *movieList;
 @property (nonatomic) NSMutableArray *movieTypeList;
 @property (nonatomic) NSMutableArray *watchedList;
